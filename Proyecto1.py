@@ -9,8 +9,8 @@ def menu ():
     print("1.- Circulo")
     print("2.- Triangulo")
     print("3.- Cuadrado")
+    print("4.- Poligonos Regulares de 5 a 10 lados")
     
-
 
 def circulo():
     pi=3.1415
@@ -36,16 +36,32 @@ def cuadrado():
     print ("\nEl valor del perimetro es: ",p)
     print ("El valor del area es: ",a)
     
+def poligonos_r():
+    n=int(input("Ingrese el numerode lados:"))
+    l=int(input("Ingrese la medida de uno de los lados:"))
+    a=int(input("Ingrese la medida del apotema:"))
+    
+    if n>=5 or n<=10:
+        a=(n*l*a)/2
+        p=n*l
+    else:
+        print("Ingrese un numero valido")
 
+    print ("\nEl valor del perimetro es: ",p)
+    print ("El valor del area es: ",a)
+           
+    
 def main():
     menu()
-    opc=int(input("\nESCOJA UNA OPCION"))
+    opc=int(input("\nESCOJA UNA OPCION:"))
     if opc==1:
         circulo()
     if opc==2:
         triangulo()
     if opc==3:
         cuadrado()
+    if opc==4:
+        poligonos_r()
 
     
 main()
