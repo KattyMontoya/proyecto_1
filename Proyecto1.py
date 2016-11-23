@@ -59,7 +59,7 @@ def poligonos_r():
 def main():
     menu()
     a='a'
-    opc=input("\nESCOJA UNA OPCION(PARA TERMINAR EL ""\n""PROGRAMA NO DIJITE NADA Y PRESIONE ENTER): ")
+    opc=int(input("\nESCOJA UNA OPCION(PARA TERMINAR EL ""\n""PROGRAMA NO DIJITE NADA Y PRESIONE ENTER): "))
     while opc !="":
         if opc==1:
             circulo()
@@ -69,7 +69,7 @@ def main():
             cuadrado()
         if opc==4:
             poligonos_r()
-        else:
+        if opc>4:
             print("\nOPCION INCORRECTA... INTENTE DE NUEVO")
         a=input("\nPRESIONE ENTER PARA CONTINUAR...")
         if a=="":
